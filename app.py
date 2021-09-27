@@ -11,6 +11,7 @@ from kafka import KafkaProducer
 EVENT_TEMPLATES = [
 
     {
+    "data":{
   "correlationId":"123321",
   "allAccounts":True,
   "confidence":0.99,
@@ -70,9 +71,10 @@ EVENT_TEMPLATES = [
         }
       ]
     }
+    
   ]
 }
-
+}
 ]
 
 
