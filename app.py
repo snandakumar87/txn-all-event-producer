@@ -100,7 +100,7 @@ def main(args):
     logging.info('begin sending events')
     while True:
 
-        producer.send(args.topic,json.dumps(generate_event()).encode() , 'cust567'.encode())
+        producer.send(args.topic,json.dumps(generate_event()).encode() , '123321'.encode())
         time.sleep(1000.0)
     logging.info('end sending events')
 
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--brokers',
         help='The bootstrap servers, env variable KAFKA_BROKERS',
-        default='localhost:9092')
+        default='my-cluster-kafka-brokers:9092')
     parser.add_argument(
         '--topic',
         help='Topic to publish to, env variable KAFKA_TOPIC',
