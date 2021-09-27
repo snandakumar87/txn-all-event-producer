@@ -11,30 +11,68 @@ from kafka import KafkaProducer
 EVENT_TEMPLATES = [
 
     {
-        "specversion": "1.0",
-        "id": "a89b61a2-5644-487a-8a86-144855c5dce8",
-        "source": "SomeEventSource",
-        "type": "DecisionRequest",
-        "subject": "TheSubject",
-        "kogitodmnmodelname": "TransactionMonitoringDMN",
-        "kogitodmnmodelnamespace": "https://kiegroup.org/dmn/_EED47FB5-8A7C-44F3-A786-563FD2DAF015",
-        "data": {
-            "Transaction": { "transactionAmount": 9500,
-                             "transactionCountry":"US",
-                             "merchantType": "MERCH336",
-                             "transactionType":"Web" ,
-                             "transactionId":1626891159443,
-                             "paymentMode":"savings"},
-            "Customer": {
-                "averageTransactionAmount": 300,
-                "riskIndex": 1.7,
-                "marriage": False,
-                "jobChange": False,
-                "cityChange": False,
-                "customerId": "CUST898920"
-            }
+  "correlationId":"123321",
+  "allAccounts":true,
+  "confidence":0.99,
+  "accounts":[
+    {
+      "accountId":"123456",
+      "holdings":[
+        {
+          "symbol":"IBM",
+          "description":"IBM",
+          "quantity":200
+        },
+        {
+          "symbol":"GME",
+          "description":"GameStop",
+          "quantity":90
+        },
+        {
+          "symbol":"AMZN",
+          "description":"Amazon",
+          "quantity":500
         }
+      ]
+    },
+    {
+      "accountId":"123457",
+      "holdings":[
+        {
+          "symbol":"DAL",
+          "description":"Delta Air Lines",
+          "quantity":1570
+        },
+        {
+          "symbol":"DIS",
+          "description":"Disney",
+          "quantity":134
+        }
+      ]
+    },
+    {
+      "accountId":"123458",
+      "holdings":[
+        {
+          "symbol":"GE",
+          "description":"General Electric",
+          "quantity":12032
+        },
+        {
+          "symbol":"GME",
+          "description":"GameStop",
+          "quantity":955
+        },
+        {
+          "symbol":"GOOG",
+          "description":"Alphabet Inc.",
+          "quantity":40
+        }
+      ]
     }
+  ]
+}
+
 ]
 
 
