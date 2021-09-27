@@ -130,7 +130,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--topic',
         help='Topic to publish to, env variable KAFKA_TOPIC',
-        default='event-input-stream')
+        default='var-calc-request')
     parser.add_argument(
         '--rate',
         type=int,
