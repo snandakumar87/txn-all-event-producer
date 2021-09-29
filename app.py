@@ -12,7 +12,7 @@ EVENT_TEMPLATES = [
 
 {
   "correlationId":"123321",
-  "allAccounts":false,
+  "allAccounts":False,
   "entityId": "desk123",
   "entityType": "desk",
   "confidence":0.99,
