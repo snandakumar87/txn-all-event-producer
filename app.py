@@ -10,7 +10,7 @@ from kafka import KafkaProducer
 
 EVENT_TEMPLATES = [
 
-{
+{ "data" : {
   "correlationId":"123321",
   "allAccounts":False,
   "entityId": "desk123",
@@ -74,7 +74,7 @@ EVENT_TEMPLATES = [
     }
   ]
 }
-
+}
 ]
 
 
